@@ -1,0 +1,93 @@
+/* NOTERA — Responsive Purple Neon */
+
+@media (max-width: 600px) {
+  .app { max-width: 100%; }
+
+  .header {
+    padding: 0 10px 0 14px;
+  }
+
+  .message { max-width: 88%; }
+
+  .messages-list {
+    padding: 16px 10px 12px;
+    gap: 8px;
+  }
+
+  .composer {
+    padding: 10px 10px;
+    padding-bottom: max(10px, env(safe-area-inset-bottom));
+  }
+
+  .auth-container {
+    padding: 36px 22px 28px;
+    border-radius: 22px;
+  }
+
+  .auth-logo h1 { font-size: 26px; }
+  .auth-logo img { width: 52px; height: 52px; }
+
+  .modal-content {
+    width: 94%;
+    margin: 0 8px;
+  }
+
+  .send-btn {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+@media (min-width: 601px) {
+  .app {
+    border-left: 1px solid rgba(155, 53, 255, 0.1);
+    border-right: 1px solid rgba(155, 53, 255, 0.1);
+    box-shadow: 0 0 80px rgba(117, 21, 216, 0.08);
+  }
+
+  .message { max-width: 68%; }
+}
+
+@media (min-width: 941px) {
+  body {
+    background: #030208;
+  }
+}
+
+@media (hover: none) {
+  .icon-btn:hover {
+    background: transparent;
+    color: var(--text-muted, #6E5F8A);
+    transform: none;
+    box-shadow: none;
+  }
+
+  .icon-btn:active {
+    background: rgba(155, 53, 255, 0.15);
+    color: #B66AFF;
+  }
+
+  .message-bubble:active {
+    border-color: rgba(155, 53, 255, 0.4);
+  }
+}
+
+@supports (padding: env(safe-area-inset-top)) {
+  .header {
+    padding-top: env(safe-area-inset-top);
+    height: calc(var(--header-h, 62px) + env(safe-area-inset-top));
+  }
+
+  .auth-screen {
+    padding-top: max(28px, env(safe-area-inset-top));
+    padding-bottom: max(28px, env(safe-area-inset-bottom));
+  }
+}
+
+@media (max-height: 520px) and (orientation: landscape) {
+  .auth-logo { margin-bottom: 16px; }
+  .auth-logo img { width: 36px; height: 36px; margin-bottom: 8px; }
+  .auth-logo h1 { font-size: 20px; }
+  .auth-tagline { display: none; }
+  .auth-container { padding: 24px 28px; }
+}

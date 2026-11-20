@@ -3,7 +3,7 @@
  * Caches only static assets. Never caches private messages or files.
  */
 
-const CACHE_NAME = 'notera-static-v1';
+const CACHE_NAME = 'notera-static-v2';
 const STATIC_ASSETS = [
   './',
   './index.html',
